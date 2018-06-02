@@ -1,0 +1,190 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background: rgba(237, 205, 31, 1);
+    z-index: 2;
+}
+
+.nav-title {
+}
+
+#main {
+    position: relative;
+    top: 80px;
+}
+
+.section {
+    width: 100%;
+    position: relative;
+    /* height: 600px; */
+    z-index: 1;
+    padding: 40px 0;
+    /* background: white; */
+}
+
+.short-ruler {
+    width: 100px;
+    height: 16px;
+    margin: 30px 0;
+    background-color: rgba(237, 205, 31, 1);
+}
+
+.section-divider {
+    height: 300px;
+}
+
+#main-section {
+}
+
+.main-section-text {
+    text-align: right;
+    /* position: absolute; */
+    top: 60px;
+    right: 280px;
+    margin-bottom: 400px;
+}
+
+.main-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/jewel-bg.jpg);
+    background-size: cover;
+    background-position: 20% 50%;
+}
+
+#feature-section {
+    background: white;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#feature-section .section-title {
+    font-size: 50px;
+    text-align: center;
+}
+
+#feature-section .short-ruler {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-item {
+    background: #f6f6f6;
+}
+
+.feature-item-image {
+    height: 240px;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.feature-item-image.aviation {
+    background-image: url(../img/aviation.jpg);
+}
+
+.feature-item-image.precision {
+    background-image: url(../img/precision.jpg);
+}
+
+.feature-item-image.military {
+    background-image: url(../img/military.jpg);
+}
+
+.feature-item-text {
+    text-align: left;
+    padding: 20px;
+}
+
+.feature-item-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3D5975;
+}
+
+.feature-item-desc {
+
+}
+
+#material-section {
+    background: white;
+    width: 100%;
+    display: flex;
+    padding: 0;
+}
+
+.material-text {
+    padding-top: 100px;
+    padding-left: 250px;
+}
+
+.section-half {
+    width: 50%;
+    height: 100%;
+    /* float: left; */
+}
+
+.section-half .material-bg {
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/model-1.jpg);
+    background-size: 160%;
+    background-position: 40% 30%;
+}
+
+#spec-section {
+    /* height: 240px; */
+    /* padding: 20px; */
+    background: rgba(237, 205, 31, 1);
+}
+
+.spec-item {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.spec-number {
+    font-size: 36px;
+    color: white;
+}
+
+.spec-name {
+    font-size: 24px;
+    color: #3D5975;
+    font-weight: bold;
+}
+
+#reason-section {
+    /* height: 900px; */
+}
+
+.reason-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/tech.jpg);
+    filter: brightness(0.6);
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+}
+
+.reason-item {
+    height: 240px;
+    /* width: 400px; */
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+#footer-section {
+    background: #202020;
+    height: 250px;
+}
+
+@media (max-width: 767px) {
+    .section-divider {
+        height: 150px;
+    }
+}
