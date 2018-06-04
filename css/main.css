@@ -58,7 +58,7 @@ html, body {
 }
 
 #main-section {
-    height: 480px;
+    height: 40%;
 }
 
 .main-section-text {
@@ -77,6 +77,38 @@ html, body {
     background-image: url(../img/jewel-bg.jpg);
     background-size: cover;
     background-position: 20% 50%;
+}
+
+#desc-section {
+    padding: 0;
+    height: 320px;
+    color: white;
+    background: #3D5975;
+    display: flex;
+}
+
+.desc-img {
+    height: 100%;
+    width: auto;
+}
+
+/* .desc-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/printer.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: -1;
+} */
+
+.desc-section-text {
+    /* max-width: 50%; */
+    /* font-size: 24px; */
+    padding: 40px;
+    margin-top: 10px;
 }
 
 #feature-section {
@@ -133,6 +165,36 @@ html, body {
 
 }
 
+#mic-section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mic-content {
+    opacity: 0;
+    transform: scale(1) translateY(60px);
+    transition: all 1s ease-in-out;
+}
+
+.mic-text {
+    color: white;
+    text-shadow: 0 0 8px black;
+    text-align: center;
+}
+
+.mic-hr {
+    margin-top: 30px;
+    max-width: 40%;
+    min-width: 320px;
+    height: 2px;
+    background: white;
+    margin: 0 auto;
+    box-shadow: 0 0 4px black;
+}
+
 #material-section {
     background: white;
     width: 100%;
@@ -147,7 +209,6 @@ html, body {
 
 .material-desc {
     background: rgba(255, 255, 255, 0.6);
-    padding: 10px;
 }
 
 #spec-section {
@@ -202,7 +263,7 @@ html, body {
 
 .reason-img-container {
     height: 100%;
-    width: 40%;
+    width: 480px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -259,20 +320,33 @@ html, body {
 }
 
 #footer-section {
+    height: 640px;
+    overflow: hidden;
+}
+
+.footer-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(../img/map.jpg);
     background-size: cover;
-    height: 600px;
+    transform: scale(1.2);
+    transition: all 1s ease-in-out;
+    opacity: 0.8;
 }
 
 .company-info-container {
     background: rgba(255, 255, 255, 0.85);
     height: 100%;
     padding: 40px;
+    transition: all 1s ease-in-out;
+    transform: translateX(-300px);
+    opacity: 0;
 }
 
 .company-info-item {
-    line-height: 40px;
-    font-size: 20px;
+    line-height: 36px;
     display: flex;
 }
 
@@ -304,12 +378,17 @@ html, body {
     .material-text {
         max-width: 25%;
     }
+
+    .desc-section-text {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 1199px) {
     .spec-number {
         font-size: 24px;
     }
+    
 }
 
 @media (max-width: 991px) {
@@ -317,14 +396,37 @@ html, body {
         background-position: 35% 50%;
     }
 
+    #desc-section {
+        display: block;
+        height: 100%;
+    }
+
+    .desc-img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .desc-section-text {
+        padding: 10px;
+        width: 100%;
+    }
+
     #material-section {
         background-size: 200%;
         background-position-x: 100%;
     }
-    
+
+    .material-desc {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 767px) {
+    .short-ruler {
+        margin: 20px 0;
+    }
+
     .section-divider {
         height: 250px;
     }

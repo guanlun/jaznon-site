@@ -5,6 +5,19 @@ $(document).ready(() => {
     const reasonImages = $('.reason-img');
     const reasonImagesOffsetTop = reasonImages.map(idx => reasonImages.eq(idx).offset().top);
 
+    const micSection = $('#mic-section');
+    const micSectionOffsetTop = micSection.offset().top;
+    const micContent = $('.mic-content');
+
+    const footerSection = $('#footer-section');
+    const footerSectionOffsetTop = footerSection.offset().top;
+
+    const footerBg = $('.footer-bg');
+    const companyInfoContainer = $('.company-info-container');
+
+    let micZoomed = false;
+    let companyInfoSlided = false;
+
     $(document).on('scroll', () => {
         const windowScroll = $(window).scrollTop();
 
@@ -20,5 +33,25 @@ $(document).ready(() => {
         //         reasonImage.css('top', `${(windowScroll - reasonImageOffsetTop) * 0.06 - 20}%`);
         //     }
         // }
+
+        if (!micZoomed && windowScroll > micSectionOffsetTop - 600) {
+            micZoomed = true;
+            micContent.css({
+                transform: 'scale(1)',
+                opacity: 1,
+            });
+        }
+
+        if (!companyInfoSlided && windowScroll > footerSectionOffsetTop - 500) {
+            companyInfoSlided = true;
+            footerBg.css({
+                transform: 'scale(1)',
+                opacity: 1
+            });
+            companyInfoContainer.css({
+                transform: 'translateX(0)',
+                opacity: 1,
+            });
+        }
     });
 })
