@@ -6,14 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./scripts/main.js"></script>
     <title>Jaznon</title>
 </head>
 <body>
-    <div class="navbar">
+    <div class="nav-bar">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-3 nav-title">
+            <div class="nav-content">
+                <div class="nav-title">
                     <strong>JAZNON</strong>
+                </div>
+                <div class="nav-items">
+                    <div class="nav-item">品牌</div>
+                    <div class="nav-item">技术参数</div>
+                    <div class="nav-item">特色</div>
+                    <div class="nav-item">联系我们</div>
                 </div>
             </div>
         </div>
@@ -21,9 +29,13 @@
     <div id="main">
         <div class="main-bg"></div>
         <div class="section" id="main-section">
-            <div class="main-section-text">
-                <h3 class="text-white">Jaznon系列珠宝首饰</h3>
-                <h1 class="text-white">3D打印机</h1>
+            <div class="container">
+                <div class="main-section-text">
+                    <h3>Jaznon系列珠宝首饰</h3>
+                    <h1>3D打印机</h1>
+                    <br />
+                    <h5>一台专为珠宝行业而生的3D打印机</h5>
+                </div>
             </div>
         </div>
 
@@ -71,41 +83,40 @@
             </div>
         </div>
 
-        <div class="section section-divider"></div>
+        <!-- <div class="section section-divider"></div> -->
 
-        <div class="section" id="material-section">
-            <div class="section-half material-text">
-                <h1>树脂</h1>
-                <div class="material-ruler short-ruler"></div>
-                <div>无毒，低气味，高精度，快速固化</div>
+        <!-- <div class="section" id="material-section">
+            <div class="container">
+                <div class="material-text">
+                    <h1>树脂</h1>
+                    <div class="material-ruler short-ruler"></div>
+                    <div>无毒，低气味，高精度，快速固化。成品兼具良好的强度及柔韧性，成型出色且耐冲击，具有一定的弹性，改善了光敏树脂较脆易碎的弊端。我公司提供多款样品料及铸造料，色彩丰富，具有不同的成型特点，以满足不同客户的需求。</div>
+                </div>
             </div>
-            <div class="section-half">
-                <div class="material-bg"></div>
-            </div>
-        </div>
+        </div> -->
 
         <div class="section" id="spec-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-md-6 col-lg-3">
                         <div class="spec-item">
                             <div class="spec-number">515x330x900mm</div>
                             <div class="spec-name">产品规格</div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-md-6 col-lg-3">
                         <div class="spec-item">
                             <div class="spec-number">30kg</div>
                             <div class="spec-name">产品重量</div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-md-6 col-lg-3">
                         <div class="spec-item">
                             <div class="spec-number">76x56x200mm</div>
                             <div class="spec-name">成型尺寸</div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-md-6 col-lg-3">
                         <div class="spec-item">
                             <div class="spec-number">0.1x0.05x0.016mm</div>
                             <div class="spec-name">成型精度</div>
@@ -118,14 +129,117 @@
         <div class="section" id="reason-section">
             <div class="reason-bg"></div>
             <div class="container">
-                <div class="reason-item">成型快</div>
+                <div class="reason-list">
+                    <div class="reason-item reason-text-right">
+                        <div class="reason-img-container">
+                            <img class="reason-img" src="./img/product-4.jpg" />
+                        </div>
+                        <div class="reason-text">
+                            <div class="reason-title">成型快</div>
+                            <div class="short-ruler"></div>
+                            <div class="reason-desc">
+                                每小时工件打印高度10-12mm
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reason-item reason-text-left">
+                        <div class="reason-text">
+                            <div class="reason-title">精度高</div>
+                            <div class="short-ruler"></div>
+                            <div class="reason-desc">
+                                0.01超高精度的工作
+                            </div>
+                        </div>
+                        <div class="reason-img-container">
+                            <img class="reason-img" src="./img/product-5.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="reason-item reason-text-right">
+                        <div class="reason-img-container">
+                            <img class="reason-img" src="./img/product-6.jpg" />
+                        </div>
+                        <div class="reason-text">
+                            <div class="reason-title">易铸造</div>
+                            <div class="short-ruler"></div>
+                            <div class="reason-desc">
+                                工件易倒模，表面质量好，树脂100%燃烧
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reason-item reason-text-left">
+                        <div class="reason-text">
+                            <div class="reason-title">易操作</div>
+                            <div class="short-ruler"></div>
+                            <div class="reason-desc">
+                                软件操作界面简单易懂
+                            </div>
+                        </div>
+                        <div class="reason-img-container">
+                            <img class="reason-img" src="./img/product-3.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="reason-item reason-text-right">
+                        <div class="reason-img-container">
+                            <img class="reason-img" src="./img/product-7.jpg" />
+                        </div>
+                        <div class="reason-text">
+                            <div class="reason-title">寿命长</div>
+                            <div class="short-ruler"></div>
+                            <div class="reason-desc">
+                                LED光源50000小时以上
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reason-item reason-text-left">
+                        <div class="reason-text">
+                            <div class="reason-title">效率高</div>
+                            <div class="short-ruler"></div>
+                            <div class="reason-desc">
+                                7x24小时持续生产
+                            </div>
+                        </div>
+                        <div class="reason-img-container">
+                            <img class="reason-img" src="./img/product-1.jpg" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="section" id="footer-section">
             <div class="container">
                 <div class="row">
-                    footer
+                    <div class="col-md-6">
+                        <div class="company-info-container">
+                            <h1>JAZNON</h1>
+                            <div class="short-ruler"></div>
+                            <div class="company-info-item">
+                                <div class="info-icon icon-company"></div>
+                                <div>生产商：深圳市矽港科技有限公司</div>
+                            </div>
+                            <div class="company-info-item">
+                                <div class="info-icon icon-phone"></div>
+                                <div>+86 159 8930 3033（销售：许生）</div>
+                            </div>
+                            <div class="company-info-item">
+                                <div class="info-icon icon-phone"></div>
+                                <div>+86 132 4473 9558（技术支持：袁生，李生)</div>
+                            </div>
+                            <div class="company-info-item">
+                                <div class="info-icon icon-email"></div>
+                                <div>2638194878@qq.com</div>
+                            </div>
+                            <div class="company-info-item">
+                                <div class="info-icon icon-address"></div>
+                                <div>深圳市宝安区新安六路1003号金融港A座1116</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
