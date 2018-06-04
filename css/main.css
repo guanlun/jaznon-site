@@ -107,11 +107,11 @@ html, body {
 }
 
 .feature-item-image.aviation {
-    background-image: url(../img/aviation.jpg);
+    background-image: url(../img/aviation-sm.jpg);
 }
 
 .feature-item-image.precision {
-    background-image: url(../img/precision.jpg);
+    background-image: url(../img/precision-sm.jpg);
 }
 
 .feature-item-image.military {
@@ -138,29 +138,16 @@ html, body {
     width: 100%;
     display: flex;
     padding: 40px 0;
-    background-image: url(../img/product-1.jpg);
+    background-image: url(../img/material.jpg);
     background-position-x: right;
     background-position-y: 50%;
     background-repeat: no-repeat;
     background-size: 70%;
 }
 
-.material-text {
-    max-width: 25%;
-}
-
-.section-half {
-    width: 50%;
-    height: 100%;
-    /* float: left; */
-}
-
-.section-half .material-bg {
-    width: 100%;
-    height: 400px;
-    background-image: url(../img/product-1.jpg);
-    background-size: 160%;
-    background-position: 40% 30%;
+.material-desc {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
 }
 
 #spec-section {
@@ -194,7 +181,7 @@ html, body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(../img/tech.jpg);
+    background: url(../img/tech-sm.jpg);
     filter: brightness(0.6);
     background-size: cover;
     background-position: 50% 50%;
@@ -216,8 +203,39 @@ html, body {
 .reason-img-container {
     height: 100%;
     width: 40%;
-    overflow: hidden;
-    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* overflow: hidden;
+    position: relative; */
+}
+
+.reason-img-1 {
+    background-image: url(../img/product-1.jpg);
+}
+
+.reason-img-2 {
+    background-image: url(../img/product-2.jpg);
+}
+
+.reason-img-3 {
+    background-image: url(../img/product-3.jpg);
+}
+
+.reason-img-4 {
+    background-image: url(../img/product-4.jpg);
+}
+
+.reason-img-5 {
+    background-image: url(../img/product-5.jpg);
+}
+
+.reason-img-6 {
+    background-image: url(../img/product-6.jpg);
+}
+
+.reason-img-7 {
+    background-image: url(../img/product-7.jpg);
 }
 
 .reason-img {
@@ -261,9 +279,8 @@ html, body {
 .info-icon {
     margin-top: 5px;
     margin-right: 5px;
-    height: 30px;
     width: 30px;
-    background-size: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -283,6 +300,12 @@ html, body {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAgMAAACf9p+rAAAADFBMVEUAAAAyMjIzMzMzMzMmXYBMAAAAA3RSTlMAf3QFuRTCAAAAYUlEQVR4AWIYhoDRAYcE9wNAe2SAATAQA8Hoh/LF+1m+VXBTAYcuFMWSYQODQUKTd2hqh+SCpROgIwk6UrB1Alg6oSMJOlKgI9BzFhzMRa+vuXjhKnrn2on5xy9i/vGF4QGYoFGYFXBdcgAAAABJRU5ErkJggg==)
 }
 
+@media (min-width: 992px) {
+    .material-text {
+        max-width: 25%;
+    }
+}
+
 @media (max-width: 1199px) {
     .spec-number {
         font-size: 24px;
@@ -293,6 +316,12 @@ html, body {
     .main-bg {
         background-position: 35% 50%;
     }
+
+    #material-section {
+        background-size: 200%;
+        background-position-x: 100%;
+    }
+    
 }
 
 @media (max-width: 767px) {
@@ -322,7 +351,6 @@ html, body {
 
     .reason-img-container {
         width: 100%;
-        height: auto;
     }
 
     .reason-text {
