@@ -1,8 +1,10 @@
 $(document).ready(() => {
+    const navbar = $('.nav-bar');
+
     const materialSection = $('#material-section');
     const materialSectionOffsetTop = materialSection.offset().top;
 
-    const reasonImages = $('.reason-img');
+    const reasonImages = $('.reason-img-container');
     const reasonImagesOffsetTop = reasonImages.map(idx => reasonImages.eq(idx).offset().top);
 
     const micSection = $('#mic-section');
@@ -25,16 +27,16 @@ $(document).ready(() => {
             materialSection.css('background-position-y', (windowScroll - materialSectionOffsetTop) / 800 * -80 + 20 + '%')
         }
 
-        // for (let i = 0; i < reasonImages.length; i++) {
-        //     const reasonImage = reasonImages.eq(i);
-        //     const reasonImageOffsetTop = reasonImagesOffsetTop[i];
+        for (let i = 0; i < reasonImages.length; i++) {
+            const reasonImage = reasonImages.eq(i);
+            const reasonImageOffsetTop = reasonImagesOffsetTop[i];
 
-        //     if (windowScroll > reasonImageOffsetTop - 600 && windowScroll < reasonImageOffsetTop + 300) {
-        //         reasonImage.css('top', `${(windowScroll - reasonImageOffsetTop) * 0.06 - 20}%`);
-        //     }
-        // }
+            if (windowScroll > reasonImageOffsetTop - 600 && windowScroll < reasonImageOffsetTop + 300) {
+                reasonImage.css('background-position-y', `${(windowScroll - reasonImageOffsetTop + 600) * 0.06 + 30}%`);
+            }
+        }
 
-        if (!micZoomed && windowScroll > micSectionOffsetTop - 600) {
+        if (!micZoomed && windowScroll > micSectionOffsetTop - 500) {
             micZoomed = true;
             micContent.css({
                 transform: 'scale(1)',
@@ -53,5 +55,40 @@ $(document).ready(() => {
                 opacity: 1,
             });
         }
+
+        if (windowScroll > 500) {
+            if (!navbar.hasClass('shrinked')) {
+                $('.nav-bar').addClass('shrinked');
+            }
+        } else if (windowScroll < 300) {
+            if (navbar.hasClass('shrinked')) {
+                $('.nav-bar').removeClass('shrinked');
+            }
+        }
     });
+
+    const navItemScrollMapping = {
+        '.nav-brand': '#feature-section',
+        '.nav-spec': '#spec-section',
+        '.nav-feature': '#reason-section',
+        '.nav-contact': '#footer-section'
+    }
+
+    $('.nav-title').click(() => {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+        });
+    });
+
+    for (const navItemClassName of Object.keys(navItemScrollMapping)) {
+        $(navItemClassName).click(() => {
+            window.scroll({
+                top: $(navItemScrollMapping[navItemClassName]).offset().top - 40,
+                left: 0,
+                behavior: 'smooth',
+            });
+        });
+    }
 })
