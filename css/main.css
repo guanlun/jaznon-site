@@ -398,6 +398,9 @@ html, body {
         font-size: 24px;
     }
     
+    .desc-section-text {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 991px) {
