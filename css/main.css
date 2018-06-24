@@ -1,5 +1,45 @@
 html, body {
     font-family: "Microsoft YaHei", "Helvetica Neue";
+    overflow-x: hidden;
+}
+
+.splash {
+    position: fixed;
+    z-index: 100;
+    /* background-color: #3d5975; */
+    background-image: url(../img/silk-bg.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transition: all 1s ease;
+}
+
+.splash.flipped {
+    /* margin-left: -100%; */
+    opacity: 0;
+}
+
+.splash-scroll-indicator {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.splash-cta-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 4px white solid;
+    margin-right: 30px;
+}
+
+.splash-text {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-bar {
@@ -80,7 +120,7 @@ html, body {
 .main-section-text {
     text-align: right;
     position: relative;
-    top: 60px;
+    top: 140px;
     margin-bottom: 400px;
     color: white;
     text-shadow: 0 0 4px #202020;
@@ -90,9 +130,9 @@ html, body {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-image: url(../img/jewel-bg.jpg);
+    background-image: url(../img/silk-bg.jpg);
     background-size: cover;
-    background-position: 20% 50%;
+    /* background-position: 20% 50%; */
 }
 
 #desc-section {
@@ -391,6 +431,10 @@ html, body {
     width: 30px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.icon-down-arrow {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAABUklEQVR4Ae3PgWbDYBRH8VuYiBBC33amBgMUGGCvsUFBoaAI7HG64MO21HZt9xSc/wXiC+cXzjnnnHPOOVe9zeXrCRAgQIAAAQIECBAgQIAAAQIECBAg4I+7j+1NAFM8xCbKt18i3mOLA6aYl9cvQP5yjQACxpjb+2cgvxEmDDDG+dMf+yja07eUOSYE0PKrCS0/TUgAEvnt4jH+vd3mcpUwVgJW+e1iF0ERzjGWAQYqP0EoAAxxQvPzhDyAz88ThhwAyi8gnGLIAKB8gJAH9EB+ASEL6ONYmF9A6BMALr+AcIw+AWDyAcIKwOQDhF8BHZpfQOh+BHRxQPMLCIforgHQfICwAqD5AOFu9Y3MBwivqy9vZD5AWB+fzxP4fJ7A5/MEPp8m8Pkogc9HCXw+SuDzUQKfjxL4fJTA56MEPh8l8Pkogc9HCVS+c84555xzzn0AkCYrTZYSqawAAAAASUVORK5CYII=);
 }
 
 .icon-company {

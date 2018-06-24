@@ -19,9 +19,23 @@ $(document).ready(() => {
 
     let micZoomed = false;
     let companyInfoSlided = false;
+    let splashFlipped = false;
+
+    function hideSplash() {
+        splashFlipped = true;
+        $('.splash').addClass('flipped');
+        setTimeout(() => {
+            $('.splash').hide();
+        }, 1000);
+        $(window).scrollTop(0);
+    }
 
     $(document).on('scroll', () => {
         const windowScroll = $(window).scrollTop();
+
+        if (!splashFlipped && windowScroll > 100) {
+            hideSplash();
+        }
 
         if (windowScroll > materialSectionOffsetTop - 600 && windowScroll < materialSectionOffsetTop + 300) {
             materialSection.css('background-position-y', (windowScroll - materialSectionOffsetTop) / 800 * -80 + 20 + '%')
@@ -91,4 +105,8 @@ $(document).ready(() => {
             });
         });
     }
-})
+
+    $('.splash-scroll-indicator').click(() => {
+        hideSplash();
+    });
+});
