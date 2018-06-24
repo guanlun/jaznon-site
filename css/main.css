@@ -27,6 +27,15 @@ html, body {
     cursor: pointer;
 }
 
+.nav-logo {
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-bar.nav-bar.shrinked .nav-logo {
+    height: 30px;
+}
+
 .nav-items {
     display: flex;
     font-weight: bold;
@@ -94,9 +103,35 @@ html, body {
     display: flex;
 }
 
-.desc-img {
-    height: 100%;
-    width: auto;
+.desc-printer-imgs {
+    
+    background: #e0e0e0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.printer-img-item {
+    padding: 20px;
+    
+}
+
+.printer-img-item img {
+    height: 250px;
+    margin-bottom: -10px;
+}
+
+.printer-1080 img {
+}
+
+.printer-800 img {
+    padding: 10px 0;
+}
+
+.printer-img-item p {
+    padding: 10px;
+    background: #202020;
+    text-align: center;
 }
 
 /* .desc-bg {
