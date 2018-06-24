@@ -1,8 +1,14 @@
 $(document).ready(() => {
     const navbar = $('.nav-bar');
 
-    const materialSection = $('#material-section');
-    const materialSectionOffsetTop = materialSection.offset().top;
+    const windowHeight = $(window).height();
+
+    const sips = $('.sip');
+    const sipOffsetTopVals = sips.map(idx => sips.eq(idx).offset().top);
+    const sipInplaceVals = sips.map(_ => false);
+
+    // const materialSection = $('#material-section');
+    // const materialSectionOffsetTop = materialSection.offset().top;
 
     const reasonImages = $('.reason-img-container');
     const reasonImagesOffsetTop = reasonImages.map(idx => reasonImages.eq(idx).offset().top);
@@ -37,9 +43,9 @@ $(document).ready(() => {
             hideSplash();
         }
 
-        if (windowScroll > materialSectionOffsetTop - 600 && windowScroll < materialSectionOffsetTop + 300) {
-            materialSection.css('background-position-y', (windowScroll - materialSectionOffsetTop) / 800 * -80 + 20 + '%')
-        }
+        // if (windowScroll > materialSectionOffsetTop - 600 && windowScroll < materialSectionOffsetTop + 300) {
+        //     materialSection.css('background-position-y', (windowScroll - materialSectionOffsetTop) / 800 * -80 + 20 + '%')
+        // }
 
         for (let i = 0; i < reasonImages.length; i++) {
             const reasonImage = reasonImages.eq(i);
@@ -47,6 +53,16 @@ $(document).ready(() => {
 
             if (windowScroll > reasonImageOffsetTop - 600 && windowScroll < reasonImageOffsetTop + 300) {
                 reasonImage.css('background-position-y', `${(windowScroll - reasonImageOffsetTop + 600) * 0.06 + 30}%`);
+            }
+        }
+
+        for (let i = 0; i < sips.length; i++) {
+            const sip = sips.eq(i);
+            const sipOffsetTop = sipOffsetTopVals[i];
+            
+            if (!sipInplaceVals[i] && windowScroll > sipOffsetTop - windowHeight) {
+                sipInplaceVals[i] = true;
+                sip.addClass('inplace');
             }
         }
 

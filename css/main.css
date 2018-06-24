@@ -3,20 +3,30 @@ html, body {
     overflow-x: hidden;
 }
 
+.sip {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.sip.inplace {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .splash {
     position: fixed;
     z-index: 100;
-    /* background-color: #3d5975; */
     background-image: url(../img/silk-bg.jpg);
     background-size: cover;
     width: 100%;
     height: 100%;
     color: white;
+    text-shadow: 0 0 4px black;
     transition: all 1s ease;
 }
 
 .splash.flipped {
-    /* margin-left: -100%; */
     opacity: 0;
 }
 
@@ -133,6 +143,10 @@ html, body {
     background-image: url(../img/silk-bg.jpg);
     background-size: cover;
     /* background-position: 20% 50%; */
+}
+
+#mass-section {
+    background: rgba(237, 205, 31, 1);
 }
 
 #desc-section {
@@ -315,6 +329,23 @@ html, body {
     font-weight: bold;
 }
 
+#art-section {
+    background-color: #3D5975;
+}
+
+.art-img-container {
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.art-img-container img {
+    width: 160px;
+    height: 160px;
+    margin: 40px;
+}
+
 #reason-section {
     /* height: 900px; */
     padding: 0;
@@ -329,6 +360,10 @@ html, body {
     background-size: cover;
     background-position: 50% 50%;
     z-index: -1;
+}
+
+.reason-title-desc {
+    color: white;
 }
 
 .reason-list {
@@ -530,6 +565,16 @@ html, body {
         margin-bottom: 20px;
     }
 
+    .art-img-container {
+        font-size: 80px;
+    }
+
+    .art-img-container img {
+        width: 100px;
+        height: 100px;
+        margin: 30px 15px;
+    }
+
     .reason-item {
         position: relative;
         height: 240px;
@@ -558,5 +603,9 @@ html, body {
         left: 0;
         color: white;
         text-shadow: 0px 0px 4px #202020;
+    }
+
+    .footer-bg {
+        background-position: 70%;
     }
 }
